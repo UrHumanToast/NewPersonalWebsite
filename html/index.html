@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <style>
+        .my-footer {
+            height: 5em;
+            background-color: #1D3557;
+            margin-top: 1em;
+            padding: 1em;
+            text-align: center;
+            color: #F1FAEE;
+            font-size: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="projects.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="embedded-systems.html">Embedded Systems</a></li>
+                            <li><a class="dropdown-item" href="applications.html">Applications</a></li>
+                            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <!--<div id="main-carousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>-->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="./static/images/home/slide1.png" class="d-block w-100" alt="The first slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Hello!</h5>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="./static/images/home/slide2.png" class="d-block w-100" alt="The second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <p>It's mustard</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="./static/images/home/slide3.png" class="d-block w-100" alt="The third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>This</h5>
+                    <p>is text</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="./static/images/home/slide4.png" class="d-block w-100" alt="The forth slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Yes, these are PowerPoint slides</h5>
+                    <p>Our products are grown within a laboratory from a nuclear substance</p>
+                </div>
+            </div>
+        </div>
+        <!--      <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#main-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>-->
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-4">Welcome to my website</h1>
+                <p>I don't know HOW you found this site. I don't know HOW you found ME but, listen... I could really use
+                    a better job. I've worked in engineering for about 36 hours now, and I believe I can pull off whatever
+                    task you throw at me. I'm very smart you see; I scored 85 points on my IQ test, and I've been
+                    studying real hard for my next one. I once solved a problem where my cat was eating too much. As
+                    someone who works in engineering, I figured the best solution was to take his food bowl away. Steven
+                    isn't with us anymore, but he was
+                    the best cat ever.</p>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col text-center">
+                <a href="projects.html" class="btn btn-dark">Check out my projects</a>
+            </div>
+        </div>
+
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark my-footer">
+        <div class="col">
+            Left
+        </div>
+        <div class="col">
+            Middle
+        </div>
+        <div class="col">
+            Right
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
