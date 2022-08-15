@@ -1,0 +1,86 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1>What I've Been Up To</h1>
+            <p>
+                I do the projects sometimes, and sometimes the projects do me. I often believe I am in control of
+                the project, but more oftan than not, the project control me. I enjoy the project, but only the
+                project.
+            </p>
+        </div>
+    </div>
+
+    <!-- LOADED DYNAMICALLY -->
+    <div class="row g-3" id="proj-cards">
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="/contact" class="btn btn-dark">Get in touch</a>
+        </div>
+    </div>
+
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script type="text/javascript">
+    var cardsLocation = document.getElementById("proj-cards");
+
+    // Data for the main project page cards
+    const cards = [
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm1.jpg",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "I do the embedded",
+            proj_link: "proj-emb"
+        },
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino1.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "I do the electronics",
+            proj_link: "/proj-elc"
+
+        },
+        {
+            img_link: "../static/images/apps/app1.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "I do the software",
+            proj_link: "/proj-app"
+
+        },
+    ];
+
+    function load() {
+        cards.forEach(e => {
+            cardsLocation.innerHTML += `
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="${e.img_link}" alt="${e.img_alt}" class="card-img-top">
+                    <div class="card-header">
+                        <h5 class="card-title">${e.title}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${e.desc}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${e.proj_link}" class="btn btn-dark">Check it out!</a>
+                    </div>
+                </div>
+            </div>`;
+        });
+    }
+
+    load();
+</script>
+{{end}}

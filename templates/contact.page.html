@@ -1,0 +1,67 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div class="container my-form">
+
+    <form action="/contact-complete">
+        <!--method="POST"-->
+        <fieldset>
+            <legend class="mt-3">Let me know what you think!</legend>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="thoughts-wrapping">So?</span>
+                <select id="cnt-thoughts" name="cnt-thoughts" class="form-select"
+                    aria-describedby="An droption menu to rate the website." required>
+                    <option selected>It's amazing!</option>
+                    <option>It's good</option>
+                    <option>Bad. Very bad.</option>
+                </select>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="name-wrapping">Name</span>
+                <input type="text" id="ctc-name" name="ctc-name" class="form-control" placeholder="who are you?"
+                    aria-describedby="An area to input your name or username." required>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="email-wrapping">Your Email</span>
+                <input type="email" id="ctc-email" name="ctc-email" class="form-control"
+                    aria-describedby="An area to input your email address.">
+            </div>
+
+            <div class="input-group input-group-sm">
+                <span class="input-group-text">Your Message</span>
+                <textarea class="form-control" id="ctc-msg" name="ctc-msg" style="resize: none;"></textarea>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="ctc-checkbox" name="ctc-checkbox"
+                        aria-describedby="Check box for claiming free money, but it is disabled as a joke." disabled>
+                    <label class="form-check-label" for="contact-checkbox">
+                        Check to claim free money
+                    </label>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-dark">Submit</button>
+
+            </div>
+
+            <div class="mt-3">
+                <a href="/about" class="btn btn-dark">Learn about me</a>
+
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+{{end}}
+
+{{define "js"}}
+
+{{end}}

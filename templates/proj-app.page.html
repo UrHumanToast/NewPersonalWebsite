@@ -1,0 +1,104 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1 id="app-title">Applications</h1>
+            <p id="app-description"></p>
+        </div>
+    </div>
+
+    <!-- LOADED DYNAMICALLY -->
+    <div class="row g-3" id="app-cards">
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="proj-main" class="btn btn-dark">Return to all projects</a>
+        </div>
+    </div>
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script type="text/javascript">
+    var cardsLocation = document.getElementById("app-cards");
+
+    // Data for the application projects cards
+    const cards = [
+        {
+            img_link: "../static/images/apps/app1.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "Yay, app is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "/placeholder"
+
+        },
+        {
+            img_link: "../static/images/apps/app2.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "Yay, app is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "/placeholder"
+
+        },
+        {
+            img_link: "../static/images/apps/app3.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "Yay, app is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "/placeholder"
+
+        },
+        {
+            img_link: "../static/images/apps/app4.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "Yay, app is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "/placeholder"
+
+        },
+        {
+            img_link: "../static/images/apps/app2.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "Yay, app is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "/placeholder"
+
+        },
+        {
+            img_link: "../static/images/apps/app1.png",
+            img_alt: "Code",
+            title: "This is an application",
+            desc: "Yay, app is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "/placeholder"
+
+        },
+    ];
+
+    function load() {
+        cards.forEach(e => {
+            cardsLocation.innerHTML += `
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="${e.img_link}" alt="${e.img_alt}" class="card-img-top">
+                    <div class="card-header">
+                        <h5 class="card-title">${e.title}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${e.desc}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${e.proj_link}" class="btn btn-dark">Check it out!</a>
+                    </div>
+                </div>
+            </div>`;
+        });
+    }
+
+    load();
+</script>
+{{end}}

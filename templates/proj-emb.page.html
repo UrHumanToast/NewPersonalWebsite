@@ -1,0 +1,111 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1>Embedded Systems</h1>
+            <p>
+                I blah blah embedded systems, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah embedded systems, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah embedded systems, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah embedded systems, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah embedded systems, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah embedded systems, and blah blah very good, but unfortunately blah blah can't spell good.
+            </p>
+        </div>
+    </div>
+
+    <!-- LOADED DYNAMICALLY -->
+    <div class="row g-3" id="emb-cards">
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="proj-main" class="btn btn-dark">Return to all projects</a>
+        </div>
+    </div>
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script type="text/javascript">
+    var cardsLocation = document.getElementById("emb-cards");
+
+    // Data for the embedded systems project cards
+    const cards = [
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm1.jpg",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "Yay, embedded is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "placeholder.html"
+        },
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm2.jpg",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "Yay, embedded is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "placeholder.html"
+        },
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm3.png",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "Yay, embedded is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "placeholder.html"
+        },
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm4.png",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "Yay, embedded is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "placeholder.html"
+        },
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm2.jpg",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "Yay, embedded is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "placeholder.html"
+        },
+        {
+            id: "emb",
+            img_link: "../static/images/embedded/stm1.jpg",
+            img_alt: "STM32 MCU",
+            title: "This is an embedded",
+            desc: "Yay, embedded is cool. So very cool that it is what it isn't that isn't cool and it is obviously",
+            proj_link: "placeholder.html"
+        },
+    ];
+
+    function load() {
+        cards.forEach(e => {
+            cardsLocation.innerHTML += `
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="${e.img_link}" alt="${e.img_alt}" class="card-img-top">
+                    <div class="card-header">
+                        <h5 class="card-title">${e.title}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${e.desc}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${e.proj_link}" class="btn btn-dark">Check it out!</a>
+                    </div>
+                </div>
+            </div>`;
+        });
+    }
+
+    load();
+</script>
+{{end}}

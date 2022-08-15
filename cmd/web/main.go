@@ -1,3 +1,10 @@
+/**
+*	NAME: Aaron Meek
+*	DATE: 2022 - 08 - 15
+*
+*	This contains the main application logic
+ */
+
 package main
 
 import (

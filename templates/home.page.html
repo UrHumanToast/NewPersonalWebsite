@@ -1,15 +1,88 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>This is the eHome page.</h1>
 
-                <p>Visit the <a href="/about">About</a> page here.</p> 
-           
-            <img src="../static/images/AaronMeek.jpg" alt="Picture of me">
-            </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <!-- LOADED DYNAMICALLY -->
+    <div class="carousel-inner" id="slide-location">
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mt-4">Welcome to my website</h1>
+            <p>I don't know HOW you found this site. I don't know HOW you found ME but, listen... I could really use
+                a better job. I've worked in engineering for about 36 hours now, and I believe I can pull off whatever
+                task you throw at me. I'm very smart you see; I scored 85 points on my IQ test, and I've been
+                studying real hard for my next one. I once solved a problem where my cat was eating too much. As
+                someone who works in engineering, I figured the best solution was to take his food bowl away. Steven
+                isn't with us anymore, but he was
+                the best cat ever.</p>
         </div>
     </div>
+
+    <div class="row mt-3">
+        <div class="col text-center">
+            <a href="/proj-main" class="btn btn-dark">Check out my projects</a>
+        </div>
+    </div>
+
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script type="text/javascript">
+    var carouselLocation = document.getElementById("slide-location");
+
+    // Data for the home page slides
+    const slides = [
+        {
+            img_link: "../static/images/home/slide1.png",
+            img_alt: "The first slide",
+            caption1: "Hello!",
+            caption2: undefined,
+            time: 3000,
+        },
+        {
+            img_link: "../static/images/home/slide2.png",
+            img_alt: "The first slide",
+            caption1: undefined,
+            caption2: "It's mustard",
+            time: 3000,
+        },
+        {
+            img_link: "../static/images/home/slide3.png",
+            img_alt: "The first slide",
+            caption1: "This",
+            caption2: "is text",
+            time: 4000,
+        },
+        {
+            img_link: "../static/images/home/slide4.png",
+            img_alt: "The first slide",
+            caption1: "Yes, these are PowerPoint slides",
+            caption2: "Our products are grown within a laboratory from a nuclear substance",
+            time: 5000,
+        },
+    ];
+
+    function load() {
+        let i = 0;
+        slides.forEach(e => {
+            carouselLocation.innerHTML += `
+    <div class="carousel-item ${((i++) === 0 ? "active" : "")}" data-bs-interval="${e.time}">
+            <img src="${e.img_link}" class="d-block w-100" alt="${e.img_alt}">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>${(e.caption1 ? e.caption1 : "")}</h5>
+                <p>${(e.caption2 ? e.caption2 : "")}</p>
+            </div>
+        </div>`;
+        });
+    }
+
+    load();
+</script>
 {{end}}

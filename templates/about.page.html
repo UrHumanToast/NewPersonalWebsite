@@ -1,21 +1,36 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>This is the about page.</h1>
+<div class="container">
 
-                <p>This came from the template: {{index .StringMap "test"}}</p>
-         
-                <p>
-                    {{if ne (index .StringMap "remote_ip") ""}}
-                        Your remote IP address is {{index .StringMap "remote_ip"}}
-                    {{else}}
-                        I don't know your IP address yet. Visit the <a href="/">Home page</a> so I can set it.
-                    {{end}}
-                </p>
-            </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mt-4">About</h1>
+            <h3>About this website</h3>
+            <p>This website sucks. This website sucks. This website sucks. This website sucks. This website sucks. This
+                website sucks. This website sucks. This website sucks. This website sucks. This website sucks. This
+                website sucks. This website sucks. This website sucks. This website sucks. This website sucks.
+            </p>
+            <h3>About me</h3>
+            <p>I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what
+                I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I
+                don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what
+                I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I
+                don't know what I'm doing. I don't know what I'm doing.
+            </p>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <a href="/proj-main" class="btn btn-dark">Check out my projects</a>
+        </div>
+    </div>
+
+</div>
+
+{{end}}
+
+{{define "js"}}
+
 {{end}}

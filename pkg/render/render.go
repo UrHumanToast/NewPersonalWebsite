@@ -1,3 +1,11 @@
+/**
+*	NAME: Aaron Meek
+*	DATE: 2022 - 08 - 15
+*
+*	This contains all the logic to gather templates, parse
+*	data to create template data sets, and cache the templates
+ */
+
 package render
 
 import (

@@ -1,0 +1,117 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1>Electronics</h1>
+            <p>
+                I blah blah electronic, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah electronic, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah electronic, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah electronic, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah electronic, and blah blah very good, but unfortunately blah blah can't spell good.
+                I blah blah electronic, and blah blah very good, but unfortunately blah blah can't spell good.
+            </p>
+        </div>
+    </div>
+
+    <!-- LOADED DYNAMICALLY -->
+    <div class="row g-3" id="elc-cards">
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="proj-main" class="btn btn-dark">Return to all projects</a>
+        </div>
+    </div>
+</div>
+
+{{end}}
+
+{{define "js"}}
+<script type="text/javascript">
+    var cardsLocation = document.getElementById("elc-cards");
+
+    // Data for the electronic project cards
+    const cards = [
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino1.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "This peice of electronics doesn't actually do anything. I just needed a text picture",
+            proj_link: "/placeholder"
+
+        },
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino2.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "This peice of electronics doesn't actually do anything. I just needed a text picture",
+            proj_link: "/placeholder"
+
+        },
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino3.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "This peice of electronics doesn't actually do anything. I just needed a text picture",
+            proj_link: "/placeholder"
+
+        },
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino4.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "This peice of electronics doesn't actually do anything. I just needed a text picture",
+            proj_link: "/placeholder"
+
+        },
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino1.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "This peice of electronics doesn't actually do anything. I just needed a text picture",
+            proj_link: "/placeholder"
+
+        },
+        {
+            id: "elc",
+            img_link: "../static/images/electronics/arduino3.jpg",
+            img_alt: "Electronics",
+            title: "This is an electronic",
+            desc: "This peice of electronics doesn't actually do anything. I just needed a text picture",
+            proj_link: "/placeholder"
+
+        },
+    ];
+
+    function load() {
+        cards.forEach(e => {
+            cardsLocation.innerHTML += `
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="${e.img_link}" alt="${e.img_alt}" class="card-img-top">
+                    <div class="card-header">
+                        <h5 class="card-title">${e.title}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${e.desc}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${e.proj_link}" class="btn btn-dark">Check it out!</a>
+                    </div>
+                </div>
+            </div>`;
+        });
+    }
+
+    load();
+</script>
+{{end}}

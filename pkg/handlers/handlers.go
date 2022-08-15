@@ -1,3 +1,11 @@
+/**
+*	NAME: Aaron Meek
+*	DATE: 2022 - 08 - 15
+*
+*	This contains all page handlers and repository structures
+*	for app configuration
+ */
+
 package handlers
 
 import (
@@ -27,23 +35,47 @@ func NewHandlers(r *Repository) {
 	Repo = r
 }
 
-// Home - The home page handler
+// Home - Renders home about page and displays form
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
-	remoteIP := r.RemoteAddr
-	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
 	render.RenderTemplate(w, "home.page.html", &models.TemplateData{})
 }
 
-// About - The about page handler
+// About - Renders the about page and displays form
 func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
-	stringMap := make(map[string]string)
-	stringMap["test"] = "Hello, again."
+	render.RenderTemplate(w, "about.page.html", &models.TemplateData{})
+}
 
-	remoteIp := m.App.Session.GetString(r.Context(), "remote_ip")
-	stringMap["remote_ip"] = remoteIp
+// Contact - Renders the contact page and displays form
+func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "contact.page.html", &models.TemplateData{})
+}
 
-	// Send the data to the template page, and render the page
-	render.RenderTemplate(w, "about.page.html", &models.TemplateData{
-		StringMap: stringMap,
-	})
+// ContactComplete - Renders the contact-complete page and displays form
+func (m *Repository) ContactComplete(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "contact-complete.page.html", &models.TemplateData{})
+}
+
+// ProjMain - Renders the main project page and displays form
+func (m *Repository) ProjMain(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "proj-main.page.html", &models.TemplateData{})
+}
+
+// ProjApp - Renders the applications & software page and displays form
+func (m *Repository) ProjApp(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "proj-app.page.html", &models.TemplateData{})
+}
+
+// ProjEmb - Renders the embedded systems page and displays form
+func (m *Repository) ProjEmb(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "proj-emb.page.html", &models.TemplateData{})
+}
+
+// ProjElc - Renders the electronics page and displays form
+func (m *Repository) ProjElc(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "proj-elc.page.html", &models.TemplateData{})
+}
+
+// Placeholder - Renders the placeholder page and displays form
+func (m *Repository) Placeholder(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "placeholder.page.html", &models.TemplateData{})
 }
