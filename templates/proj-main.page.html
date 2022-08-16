@@ -38,24 +38,27 @@
             id: "emb",
             img_link: "../static/images/embedded/stm1.jpg",
             img_alt: "STM32 MCU",
-            title: "This is an embedded",
-            desc: "I do the embedded",
+            title: "Embedded Systems",
+            desc: "I love embedded engineering projects. I work with the STM32 MCU, and arduino for control systems, RTOS, and more.",
+            link_desc: "more firmware engineering",
             proj_link: "proj-emb"
         },
         {
             id: "elc",
             img_link: "../static/images/electronics/arduino1.jpg",
             img_alt: "Electronics",
-            title: "This is an electronic",
-            desc: "I do the electronics",
+            title: "Electronics",
+            desc: "I create electronics for multi and single use cases. You can find my electronics projects here.",
+            link_desc: "More electronics engineering",
             proj_link: "/proj-elc"
 
         },
         {
             img_link: "../static/images/apps/app1.png",
             img_alt: "Code",
-            title: "This is an application",
-            desc: "I do the software",
+            title: "Applications & Software",
+            desc: "I've written a lot of code in C/C++, Python, JavaScript, and more. I develop applications such as password managers, and software for automation.",
+            link_desc: "More software engineering",
             proj_link: "/proj-app"
 
         },
@@ -74,7 +77,7 @@
                         <p class="card-text">${e.desc}</p>
                     </div>
                     <div class="card-footer">
-                        <a href="${e.proj_link}" class="btn btn-dark">Check it out!</a>
+                        <a href="${e.proj_link}" class="btn btn-dark">${e.link_desc}</a>
                     </div>
                 </div>
             </div>`;
