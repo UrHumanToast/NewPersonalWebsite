@@ -1,44 +1,86 @@
 {{template "base" .}}
 
 {{define "content"}}
-<div class="container ">
-    <div class="row">
-        <div class="col ml-2">
-            <h1 class="mt-2">About</h1>
-            <h3 class="mt-2">The Website</h3>
-            <p>This website was developed using the Go programming language for its backend, and html template
-                processing. The website uses <a href="https://getbootstrap.com/">Bootstrap</a>, and some custom CSS for
-                styling. There will likely be a lot of interactive chunks added in the future, and a method for logging
-                in and interacting with those projects (login won't be required for all). I'll be implementing a
-                database with PostgreSQL to store necessary information. I want this website to be more than MY website.
-            </p>
-            <h3 class="mt-2">Myself</h3>
-            <p>Placeholder: I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I
-                don't know what
-                I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I
-                don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what
-                I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I
-                don't know what I'm doing. I don't know what I'm doing.
-            </p>
-        </div>
-        <div class="col-md-6 mt-5">
-            <h3 >Placeholder Resume</h3>
-            <div class="embed-responsive m-0">
-                <iframe class="embed-responsive-item" src="/static/images/resume/resume.pdf" width="450" height="400">
-                </iframe>
+<div class="container">
+    <h1 class="mt-2">About</h1>
+    <div class="row g-3">
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">The Website</h5>
+                </div>
+                <div class="card-body">This website was developed using the Go programming language for its
+                    backend, and html template processing. The website uses <a
+                        href="https://getbootstrap.com/">Bootstrap</a>, and some custom CSS for styling. There will
+                    likely be a lot of interactive chunks added in the future, and a method for logging in and
+                    interacting with those projects (login won't be required for all). I'll be implementing a
+                    database with PostgreSQL to store necessary information. I want this website to be more than MY
+                    website.</div>
+                <div class="card-footer">
+                    <ul>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                        <li>Technologies</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Myself</h5>
+                </div>
+                <div class="card-body"> Placeholder: I don't know what I'm doing. I don't know what I'm doing. I
+                    don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't
+                    know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what
+                    I'm doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm
+                    doing. I don't know what I'm doing. I don't know what I'm doing. I don't know what I'm doing. I
+                    don't know what I'm doing.</div>
+                <div class="card-footer">
+                    <ul>
+                        <li>About me</li>
+                        <li>About me</li>
+                        <li>About me</li>
+                        <li>About me</li>
+                        <li>About me</li>
+                        <li>About me</li>
+                        <li>About me</li>
+                        <li>About me</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Placeholder Resume</h5>
+                </div>
+                <div class="card-body"> <img src="/static/images/resume/resume.png" alt="Placeholder Resume"
+                        class="card-img-top img-thumbnail">
+                </div>
+                <div class="card-footer">
+                    <a href="/static/images/resume/resume.pdf" target="_blank" class="btn btn-dark">Add it to your pile</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-<div class="mt-4 row">
-    <div class="col text-center">
-        <a href="/proj-main" class="btn btn-dark">Check out my projects</a>
+    <div class="mt-4 row">
+        <div class="col text-center">
+            <a href="/proj-main" class="btn btn-dark">Check out my projects</a>
+        </div>
     </div>
 </div>
 
-</div>
 
 {{end}}
 
